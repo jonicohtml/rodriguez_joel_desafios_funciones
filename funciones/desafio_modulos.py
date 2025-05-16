@@ -19,7 +19,7 @@ def get_int(mensaje: str, mensaje_error: str, minimo: int, maximo: int, reintent
     cont = 0
     numero = input(f"{mensaje}")
     
-    while numero.isdigit() == False:
+    while ord(numero) > 57 or ord(numero) < 48:
         cont += 1
         if cont > reintentos:
             return None
@@ -34,12 +34,12 @@ def get_int(mensaje: str, mensaje_error: str, minimo: int, maximo: int, reintent
         if cont > reintentos:
             return None
         
-print(get_int("Ingese un número entero: ", f"ERROR. Vuelva a ingresar un número entero válido: ", 3, 6, 2))
+#print(get_int("Ingese un número entero: ", f"ERROR. Vuelva a ingresar un número entero válido: ", 3, 6, 2))
 '''
 
 '''
 def get_float(mensaje: str, mensaje_error: str, minimo: float | int, maximo: float | int, reintentos: int) -> float | None:
-    
+
     cont = 0
     numero = input(f"{mensaje}")
     
@@ -79,7 +79,7 @@ def get_string(longitud: int, reintentos: int, mensaje: str, mensaje_error: str)
             cadena = input(mensaje_error)
     
     
-print(get_string(5, 3, "Ingrese un texto: ", "ERROR. Ingrese una texto válido: "))
+#print(get_string(5, 3, "Ingrese un texto: ", "ERROR. Ingrese una texto válido: "))
 
 
 '''
